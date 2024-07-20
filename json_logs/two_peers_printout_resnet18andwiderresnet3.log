@@ -1,0 +1,1404 @@
+p_type=resnet18 s_type=resnet18 kd=True k_train=10 exp_id=1 temperature=5.0 s_attack_type=pgd config_path=./configs/PeerAiD_resnet18_cifar10.json start_epoch=0 total_epoch=300 lr_student=0.1 lr_peer=0.1 batch_size=64 weight_decay=0.0002 AA=True fgsm_eval=True pgd_eval=True n_examples=10000 dataset=cifar10 data_path=./data swa_s=True swa_s_start=99 save_path=./checkpoint/ save_interval=30 json_path=./json_logs/ debug_mode=False resume=False resume_s_path=None resume_t_path=None resume_s_swa_path=None re_kd_temperature=1.0 lamb1=0.0 lamb2=1.0 lamb3=1.0 gamma1=1.0 gamma2=0.1
+Start time :  2024-06-18 03:55:57
+Config file opened!
+{'epochs': 300, 'lr_student': 0.1, 'lr_peer': 0.1, 'lr_decay_epochs_peer': [214, 259, 284], 'lr_decay_epochs_student': [214, 259, 284], 'batch_size': 128, 'weight_decay': 0.0002}
+lr decay epochs of the peer model :  [214, 259, 284]
+lr decay epochs of the student model :  [214, 259, 284]
+SWA student starts at  214
+p_type=resnet18 s_type=resnet18 kd=True k_train=10 exp_id=1 temperature=5.0 s_attack_type=pgd config_path=./configs/PeerAiD_resnet18_cifar10.json start_epoch=0 total_epoch=300 lr_student=0.1 lr_peer=0.1 batch_size=128 weight_decay=0.0002 AA=True fgsm_eval=True pgd_eval=True n_examples=10000 dataset=cifar10 data_path=./data swa_s=True swa_s_start=214 save_path=./checkpoint/ save_interval=30 json_path=./json_logs/ debug_mode=False resume=False resume_s_path=None resume_t_path=None resume_s_swa_path=None re_kd_temperature=1.0 lamb1=0.0 lamb2=1.0 lamb3=1.0 gamma1=1.0 gamma2=0.1 lr_decay_epochs_peer=[214, 259, 284] lr_decay_epochs_student=[214, 259, 284]
+Device :  cuda
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch :  0
+Teacher lr :  0.1
+Teacher lr :  0.1
+Student lr : 0.1
+
+[ Train epoch: 0 ]
+
+Current batch: 0
+
+Current batch: 20
+Current adversarial peer train accuracy: 10.9375
+Current adversarial peer train loss: nan
+Current adversarial copeer train accuracy: 10.9375
+Current adversarial copeer train loss: nan
+Current adversarial student train accuracy: 10.9375
+Current adversarial student train loss: nan
+
+Current batch: 40
+
+Current batch: 60
+
+Current batch: 80
+
+Current batch: 100
+
+Current batch: 120
+
+Current batch: 140
+
+Current batch: 160
+
+Current batch: 180
+
+Current batch: 200
+
+Current batch: 220
+
+Current batch: 240
+
+Current batch: 260
+
+Current batch: 280
+
+Current batch: 300
+
+Current batch: 320
+
+Current batch: 340
+
+Current batch: 360
+
+Current batch: 380
+
+Total adversarial peer train accuarcy: 9.994
+Total adversarial peer train loss: nan
+
+Total adversarial copeer train accuarcy: 9.994
+Total adversarial copeer train loss: nan
+Total adversarial student train loss: nan
+Total adversarial student train accuarcy: 10.002
+
+[ Test epoch: 0 ]
+
+Total test clean accuarcy of the student model : 10.0
+Total adversarial test Accuarcy of the student model against PGD-10 : 10.0
+Total test clean loss of the student model: nan
+Total adversarial test loss of the student model: nan
+Best student robust acc achieved !
+Student Model Saved!
+The number of epoch reached save interval. Checkpoints are being saved.
+At epoch  0 , Student Model Saved!
+At epoch  0 , Teacher Model Saved!
+At epoch  0 , Teacher Model Saved!
+At epoch  0 , SWA student Model Saved!
+Epoch :  1
+Teacher lr :  0.1
+Teacher lr :  0.1
+Student lr : 0.1
+
+[ Train epoch: 1 ]
+
+Current batch: 0
+
+Current batch: 20
+Current adversarial peer train accuracy: 9.375
+Current adversarial peer train loss: nan
+Current adversarial copeer train accuracy: 9.375
+Current adversarial copeer train loss: nan
+Current adversarial student train accuracy: 9.375
+Current adversarial student train loss: nan
+
+Current batch: 40
+
+Current batch: 60
+
+Current batch: 80
+
+Current batch: 100
+
+Current batch: 120
+
+Current batch: 140
+
+Current batch: 160
+
+Current batch: 180
+
+Current batch: 200
+
+Current batch: 220
+
+Current batch: 240
+
+Current batch: 260
+
+Current batch: 280
+
+Current batch: 300
+
+Current batch: 320
+
+Current batch: 340
+
+Current batch: 360
+
+Current batch: 380
+
+Total adversarial peer train accuarcy: 10.0
+Total adversarial peer train loss: nan
+
+Total adversarial copeer train accuarcy: 10.0
+Total adversarial copeer train loss: nan
+Total adversarial student train loss: nan
+Total adversarial student train accuarcy: 10.0
+
+[ Test epoch: 1 ]
+
+Total test clean accuarcy of the student model : 10.0
+Total adversarial test Accuarcy of the student model against PGD-10 : 10.0
+Total test clean loss of the student model: nan
+Total adversarial test loss of the student model: nan
+Epoch :  2
+Teacher lr :  0.1
+Teacher lr :  0.1
+Student lr : 0.1
+
+[ Train epoch: 2 ]
+
+Current batch: 0
+
+Current batch: 20
+Current adversarial peer train accuracy: 5.46875
+Current adversarial peer train loss: nan
+Current adversarial copeer train accuracy: 5.46875
+Current adversarial copeer train loss: nan
+Current adversarial student train accuracy: 5.46875
+Current adversarial student train loss: nan
+
+Current batch: 40
+
+Current batch: 60
+
+Current batch: 80
+
+Current batch: 100
+
+Current batch: 120
+
+Current batch: 140
+
+Current batch: 160
+
+Current batch: 180
+
+Current batch: 200
+
+Current batch: 220
+
+Current batch: 240
+
+Current batch: 260
+
+Current batch: 280
+
+Current batch: 300
+
+Current batch: 320
+
+Current batch: 340
+
+Current batch: 360
+
+Current batch: 380
+
+Total adversarial peer train accuarcy: 10.0
+Total adversarial peer train loss: nan
+
+Total adversarial copeer train accuarcy: 10.0
+Total adversarial copeer train loss: nan
+Total adversarial student train loss: nan
+Total adversarial student train accuarcy: 10.0
+
+[ Test epoch: 2 ]
+
+Total test clean accuarcy of the student model : 10.0
+Total adversarial test Accuarcy of the student model against PGD-10 : 10.0
+Total test clean loss of the student model: nan
+Total adversarial test loss of the student model: nan
+Epoch :  3
+Teacher lr :  0.1
+Teacher lr :  0.1
+Student lr : 0.1
+
+[ Train epoch: 3 ]
+
+Current batch: 0
+
+Current batch: 20
+Current adversarial peer train accuracy: 8.59375
+Current adversarial peer train loss: nan
+Current adversarial copeer train accuracy: 8.59375
+Current adversarial copeer train loss: nan
+Current adversarial student train accuracy: 8.59375
+Current adversarial student train loss: nan
+
+Current batch: 40
+
+Current batch: 60
+
+Current batch: 80
+
+Current batch: 100
+
+Current batch: 120
+
+Current batch: 140
+
+Current batch: 160
+
+Current batch: 180
+
+Current batch: 200
+
+Current batch: 220
+
+Current batch: 240
+
+Current batch: 260
+
+Current batch: 280
+
+Current batch: 300
+
+Current batch: 320
+
+Current batch: 340
+
+Current batch: 360
+
+Current batch: 380
+
+Total adversarial peer train accuarcy: 10.0
+Total adversarial peer train loss: nan
+
+Total adversarial copeer train accuarcy: 10.0
+Total adversarial copeer train loss: nan
+Total adversarial student train loss: nan
+Total adversarial student train accuarcy: 10.0
+
+[ Test epoch: 3 ]
+
+Total test clean accuarcy of the student model : 10.0
+Total adversarial test Accuarcy of the student model against PGD-10 : 10.0
+Total test clean loss of the student model: nan
+Total adversarial test loss of the student model: nan
+Epoch :  4
+Teacher lr :  0.1
+Teacher lr :  0.1
+Student lr : 0.1
+
+[ Train epoch: 4 ]
+
+Current batch: 0
+
+Current batch: 20
+Current adversarial peer train accuracy: 8.59375
+Current adversarial peer train loss: nan
+Current adversarial copeer train accuracy: 8.59375
+Current adversarial copeer train loss: nan
+Current adversarial student train accuracy: 8.59375
+Current adversarial student train loss: nan
+
+Current batch: 40
+
+Current batch: 60
+
+Current batch: 80
+
+Current batch: 100
+
+Current batch: 120
+
+Current batch: 140
+
+Current batch: 160
+
+Current batch: 180
+
+Current batch: 200
+
+Current batch: 220
+
+Current batch: 240
+
+Current batch: 260
+
+Current batch: 280
+
+Current batch: 300
+
+Current batch: 320
+
+Current batch: 340
+
+Current batch: 360
+
+Current batch: 380
+
+Total adversarial peer train accuarcy: 10.0
+Total adversarial peer train loss: nan
+
+Total adversarial copeer train accuarcy: 10.0
+Total adversarial copeer train loss: nan
+Total adversarial student train loss: nan
+Total adversarial student train accuarcy: 10.0
+
+[ Test epoch: 4 ]
+
+Total test clean accuarcy of the student model : 10.0
+Total adversarial test Accuarcy of the student model against PGD-10 : 10.0
+Total test clean loss of the student model: nan
+Total adversarial test loss of the student model: nan
+Epoch :  5
+Teacher lr :  0.1
+Teacher lr :  0.1
+Student lr : 0.1
+
+[ Train epoch: 5 ]
+
+Current batch: 0
+
+Current batch: 20
+Current adversarial peer train accuracy: 5.46875
+Current adversarial peer train loss: nan
+Current adversarial copeer train accuracy: 5.46875
+Current adversarial copeer train loss: nan
+Current adversarial student train accuracy: 5.46875
+Current adversarial student train loss: nan
+
+Current batch: 40
+
+Current batch: 60
+
+Current batch: 80
+
+Current batch: 100
+
+Current batch: 120
+
+Current batch: 140
+
+Current batch: 160
+
+Current batch: 180
+
+Current batch: 200
+
+Current batch: 220
+
+Current batch: 240
+
+Current batch: 260
+
+Current batch: 280
+
+Current batch: 300
+
+Current batch: 320
+
+Current batch: 340
+
+Current batch: 360
+
+Current batch: 380
+
+Total adversarial peer train accuarcy: 10.0
+Total adversarial peer train loss: nan
+
+Total adversarial copeer train accuarcy: 10.0
+Total adversarial copeer train loss: nan
+Total adversarial student train loss: nan
+Total adversarial student train accuarcy: 10.0
+
+[ Test epoch: 5 ]
+
+Total test clean accuarcy of the student model : 10.0
+Total adversarial test Accuarcy of the student model against PGD-10 : 10.0
+Total test clean loss of the student model: nan
+Total adversarial test loss of the student model: nan
+Epoch :  6
+Teacher lr :  0.1
+Teacher lr :  0.1
+Student lr : 0.1
+
+[ Train epoch: 6 ]
+
+Current batch: 0
+
+Current batch: 20
+Current adversarial peer train accuracy: 4.6875
+Current adversarial peer train loss: nan
+Current adversarial copeer train accuracy: 4.6875
+Current adversarial copeer train loss: nan
+Current adversarial student train accuracy: 4.6875
+Current adversarial student train loss: nan
+
+Current batch: 40
+
+Current batch: 60
+
+Current batch: 80
+
+Current batch: 100
+
+Current batch: 120
+
+Current batch: 140
+
+Current batch: 160
+
+Current batch: 180
+
+Current batch: 200
+
+Current batch: 220
+
+Current batch: 240
+
+Current batch: 260
+
+Current batch: 280
+
+Current batch: 300
+
+Current batch: 320
+
+Current batch: 340
+
+Current batch: 360
+
+Current batch: 380
+
+Total adversarial peer train accuarcy: 10.0
+Total adversarial peer train loss: nan
+
+Total adversarial copeer train accuarcy: 10.0
+Total adversarial copeer train loss: nan
+Total adversarial student train loss: nan
+Total adversarial student train accuarcy: 10.0
+
+[ Test epoch: 6 ]
+
+Total test clean accuarcy of the student model : 10.0
+Total adversarial test Accuarcy of the student model against PGD-10 : 10.0
+Total test clean loss of the student model: nan
+Total adversarial test loss of the student model: nan
+Epoch :  7
+Teacher lr :  0.1
+Teacher lr :  0.1
+Student lr : 0.1
+
+[ Train epoch: 7 ]
+
+Current batch: 0
+
+Current batch: 20
+Current adversarial peer train accuracy: 8.59375
+Current adversarial peer train loss: nan
+Current adversarial copeer train accuracy: 8.59375
+Current adversarial copeer train loss: nan
+Current adversarial student train accuracy: 8.59375
+Current adversarial student train loss: nan
+
+Current batch: 40
+
+Current batch: 60
+
+Current batch: 80
+
+Current batch: 100
+
+Current batch: 120
+
+Current batch: 140
+
+Current batch: 160
+
+Current batch: 180
+
+Current batch: 200
+
+Current batch: 220
+
+Current batch: 240
+
+Current batch: 260
+
+Current batch: 280
+
+Current batch: 300
+
+Current batch: 320
+
+Current batch: 340
+
+Current batch: 360
+
+Current batch: 380
+
+Total adversarial peer train accuarcy: 10.0
+Total adversarial peer train loss: nan
+
+Total adversarial copeer train accuarcy: 10.0
+Total adversarial copeer train loss: nan
+Total adversarial student train loss: nan
+Total adversarial student train accuarcy: 10.0
+
+[ Test epoch: 7 ]
+
+Total test clean accuarcy of the student model : 10.0
+Total adversarial test Accuarcy of the student model against PGD-10 : 10.0
+Total test clean loss of the student model: nan
+Total adversarial test loss of the student model: nan
+Epoch :  8
+Teacher lr :  0.1
+Teacher lr :  0.1
+Student lr : 0.1
+
+[ Train epoch: 8 ]
+
+Current batch: 0
+
+Current batch: 20
+Current adversarial peer train accuracy: 14.0625
+Current adversarial peer train loss: nan
+Current adversarial copeer train accuracy: 14.0625
+Current adversarial copeer train loss: nan
+Current adversarial student train accuracy: 14.0625
+Current adversarial student train loss: nan
+
+Current batch: 40
+
+Current batch: 60
+
+Current batch: 80
+
+Current batch: 100
+
+Current batch: 120
+
+Current batch: 140
+
+Current batch: 160
+
+Current batch: 180
+
+Current batch: 200
+
+Current batch: 220
+
+Current batch: 240
+
+Current batch: 260
+
+Current batch: 280
+
+Current batch: 300
+
+Current batch: 320
+
+Current batch: 340
+
+Current batch: 360
+
+Current batch: 380
+
+Total adversarial peer train accuarcy: 10.0
+Total adversarial peer train loss: nan
+
+Total adversarial copeer train accuarcy: 10.0
+Total adversarial copeer train loss: nan
+Total adversarial student train loss: nan
+Total adversarial student train accuarcy: 10.0
+
+[ Test epoch: 8 ]
+
+Total test clean accuarcy of the student model : 10.0
+Total adversarial test Accuarcy of the student model against PGD-10 : 10.0
+Total test clean loss of the student model: nan
+Total adversarial test loss of the student model: nan
+Epoch :  9
+Teacher lr :  0.1
+Teacher lr :  0.1
+Student lr : 0.1
+
+[ Train epoch: 9 ]
+
+Current batch: 0
+
+Current batch: 20
+Current adversarial peer train accuracy: 8.59375
+Current adversarial peer train loss: nan
+Current adversarial copeer train accuracy: 8.59375
+Current adversarial copeer train loss: nan
+Current adversarial student train accuracy: 8.59375
+Current adversarial student train loss: nan
+
+Current batch: 40
+
+Current batch: 60
+
+Current batch: 80
+
+Current batch: 100
+
+Current batch: 120
+
+Current batch: 140
+
+Current batch: 160
+
+Current batch: 180
+
+Current batch: 200
+
+Current batch: 220
+
+Current batch: 240
+
+Current batch: 260
+
+Current batch: 280
+
+Current batch: 300
+
+Current batch: 320
+
+Current batch: 340
+
+Current batch: 360
+
+Current batch: 380
+
+Total adversarial peer train accuarcy: 10.0
+Total adversarial peer train loss: nan
+
+Total adversarial copeer train accuarcy: 10.0
+Total adversarial copeer train loss: nan
+Total adversarial student train loss: nan
+Total adversarial student train accuarcy: 10.0
+
+[ Test epoch: 9 ]
+
+Total test clean accuarcy of the student model : 10.0
+Total adversarial test Accuarcy of the student model against PGD-10 : 10.0
+Total test clean loss of the student model: nan
+Total adversarial test loss of the student model: nan
+Epoch :  10
+Teacher lr :  0.1
+Teacher lr :  0.1
+Student lr : 0.1
+
+[ Train epoch: 10 ]
+
+Current batch: 0
+
+Current batch: 20
+Current adversarial peer train accuracy: 4.6875
+Current adversarial peer train loss: nan
+Current adversarial copeer train accuracy: 4.6875
+Current adversarial copeer train loss: nan
+Current adversarial student train accuracy: 4.6875
+Current adversarial student train loss: nan
+
+Current batch: 40
+
+Current batch: 60
+
+Current batch: 80
+
+Current batch: 100
+
+Current batch: 120
+
+Current batch: 140
+
+Current batch: 160
+
+Current batch: 180
+
+Current batch: 200
+
+Current batch: 220
+
+Current batch: 240
+
+Current batch: 260
+
+Current batch: 280
+
+Current batch: 300
+
+Current batch: 320
+
+Current batch: 340
+
+Current batch: 360
+
+Current batch: 380
+
+Total adversarial peer train accuarcy: 10.0
+Total adversarial peer train loss: nan
+
+Total adversarial copeer train accuarcy: 10.0
+Total adversarial copeer train loss: nan
+Total adversarial student train loss: nan
+Total adversarial student train accuarcy: 10.0
+
+[ Test epoch: 10 ]
+
+Total test clean accuarcy of the student model : 10.0
+Total adversarial test Accuarcy of the student model against PGD-10 : 10.0
+Total test clean loss of the student model: nan
+Total adversarial test loss of the student model: nan
+Epoch :  11
+Teacher lr :  0.1
+Teacher lr :  0.1
+Student lr : 0.1
+
+[ Train epoch: 11 ]
+
+Current batch: 0
+
+Current batch: 20
+Current adversarial peer train accuracy: 12.5
+Current adversarial peer train loss: nan
+Current adversarial copeer train accuracy: 12.5
+Current adversarial copeer train loss: nan
+Current adversarial student train accuracy: 12.5
+Current adversarial student train loss: nan
+
+Current batch: 40
+
+Current batch: 60
+
+Current batch: 80
+
+Current batch: 100
+
+Current batch: 120
+
+Current batch: 140
+
+Current batch: 160
+
+Current batch: 180
+
+Current batch: 200
+
+Current batch: 220
+
+Current batch: 240
+
+Current batch: 260
+
+Current batch: 280
+
+Current batch: 300
+
+Current batch: 320
+
+Current batch: 340
+
+Current batch: 360
+
+Current batch: 380
+
+Total adversarial peer train accuarcy: 10.0
+Total adversarial peer train loss: nan
+
+Total adversarial copeer train accuarcy: 10.0
+Total adversarial copeer train loss: nan
+Total adversarial student train loss: nan
+Total adversarial student train accuarcy: 10.0
+
+[ Test epoch: 11 ]
+
+Total test clean accuarcy of the student model : 10.0
+Total adversarial test Accuarcy of the student model against PGD-10 : 10.0
+Total test clean loss of the student model: nan
+Total adversarial test loss of the student model: nan
+Epoch :  12
+Teacher lr :  0.1
+Teacher lr :  0.1
+Student lr : 0.1
+
+[ Train epoch: 12 ]
+
+Current batch: 0
+
+Current batch: 20
+Current adversarial peer train accuracy: 10.15625
+Current adversarial peer train loss: nan
+Current adversarial copeer train accuracy: 10.15625
+Current adversarial copeer train loss: nan
+Current adversarial student train accuracy: 10.15625
+Current adversarial student train loss: nan
+
+Current batch: 40
+
+Current batch: 60
+
+Current batch: 80
+
+Current batch: 100
+
+Current batch: 120
+
+Current batch: 140
+
+Current batch: 160
+
+Current batch: 180
+
+Current batch: 200
+
+Current batch: 220
+
+Current batch: 240
+
+Current batch: 260
+
+Current batch: 280
+
+Current batch: 300
+
+Current batch: 320
+
+Current batch: 340
+
+Current batch: 360
+
+Current batch: 380
+
+Total adversarial peer train accuarcy: 10.0
+Total adversarial peer train loss: nan
+
+Total adversarial copeer train accuarcy: 10.0
+Total adversarial copeer train loss: nan
+Total adversarial student train loss: nan
+Total adversarial student train accuarcy: 10.0
+
+[ Test epoch: 12 ]
+
+Total test clean accuarcy of the student model : 10.0
+Total adversarial test Accuarcy of the student model against PGD-10 : 10.0
+Total test clean loss of the student model: nan
+Total adversarial test loss of the student model: nan
+Epoch :  13
+Teacher lr :  0.1
+Teacher lr :  0.1
+Student lr : 0.1
+
+[ Train epoch: 13 ]
+
+Current batch: 0
+
+Current batch: 20
+Current adversarial peer train accuracy: 16.40625
+Current adversarial peer train loss: nan
+Current adversarial copeer train accuracy: 16.40625
+Current adversarial copeer train loss: nan
+Current adversarial student train accuracy: 16.40625
+Current adversarial student train loss: nan
+
+Current batch: 40
+
+Current batch: 60
+
+Current batch: 80
+
+Current batch: 100
+
+Current batch: 120
+
+Current batch: 140
+
+Current batch: 160
+
+Current batch: 180
+
+Current batch: 200
+
+Current batch: 220
+
+Current batch: 240
+
+Current batch: 260
+
+Current batch: 280
+
+Current batch: 300
+
+Current batch: 320
+
+Current batch: 340
+
+Current batch: 360
+
+Current batch: 380
+
+Total adversarial peer train accuarcy: 10.0
+Total adversarial peer train loss: nan
+
+Total adversarial copeer train accuarcy: 10.0
+Total adversarial copeer train loss: nan
+Total adversarial student train loss: nan
+Total adversarial student train accuarcy: 10.0
+
+[ Test epoch: 13 ]
+
+Total test clean accuarcy of the student model : 10.0
+Total adversarial test Accuarcy of the student model against PGD-10 : 10.0
+Total test clean loss of the student model: nan
+Total adversarial test loss of the student model: nan
+Epoch :  14
+Teacher lr :  0.1
+Teacher lr :  0.1
+Student lr : 0.1
+
+[ Train epoch: 14 ]
+
+Current batch: 0
+
+Current batch: 20
+Current adversarial peer train accuracy: 12.5
+Current adversarial peer train loss: nan
+Current adversarial copeer train accuracy: 12.5
+Current adversarial copeer train loss: nan
+Current adversarial student train accuracy: 12.5
+Current adversarial student train loss: nan
+
+Current batch: 40
+
+Current batch: 60
+
+Current batch: 80
+
+Current batch: 100
+
+Current batch: 120
+
+Current batch: 140
+
+Current batch: 160
+
+Current batch: 180
+
+Current batch: 200
+
+Current batch: 220
+
+Current batch: 240
+
+Current batch: 260
+
+Current batch: 280
+
+Current batch: 300
+
+Current batch: 320
+
+Current batch: 340
+
+Current batch: 360
+
+Current batch: 380
+
+Total adversarial peer train accuarcy: 10.0
+Total adversarial peer train loss: nan
+
+Total adversarial copeer train accuarcy: 10.0
+Total adversarial copeer train loss: nan
+Total adversarial student train loss: nan
+Total adversarial student train accuarcy: 10.0
+
+[ Test epoch: 14 ]
+
+Total test clean accuarcy of the student model : 10.0
+Total adversarial test Accuarcy of the student model against PGD-10 : 10.0
+Total test clean loss of the student model: nan
+Total adversarial test loss of the student model: nan
+Epoch :  15
+Teacher lr :  0.1
+Teacher lr :  0.1
+Student lr : 0.1
+
+[ Train epoch: 15 ]
+
+Current batch: 0
+
+Current batch: 20
+Current adversarial peer train accuracy: 13.28125
+Current adversarial peer train loss: nan
+Current adversarial copeer train accuracy: 13.28125
+Current adversarial copeer train loss: nan
+Current adversarial student train accuracy: 13.28125
+Current adversarial student train loss: nan
+
+Current batch: 40
+
+Current batch: 60
+
+Current batch: 80
+
+Current batch: 100
+
+Current batch: 120
+
+Current batch: 140
+
+Current batch: 160
+
+Current batch: 180
+
+Current batch: 200
+
+Current batch: 220
+
+Current batch: 240
+
+Current batch: 260
+
+Current batch: 280
+
+Current batch: 300
+
+Current batch: 320
+
+Current batch: 340
+
+Current batch: 360
+
+Current batch: 380
+
+Total adversarial peer train accuarcy: 10.0
+Total adversarial peer train loss: nan
+
+Total adversarial copeer train accuarcy: 10.0
+Total adversarial copeer train loss: nan
+Total adversarial student train loss: nan
+Total adversarial student train accuarcy: 10.0
+
+[ Test epoch: 15 ]
+
+Total test clean accuarcy of the student model : 10.0
+Total adversarial test Accuarcy of the student model against PGD-10 : 10.0
+Total test clean loss of the student model: nan
+Total adversarial test loss of the student model: nan
+Epoch :  16
+Teacher lr :  0.1
+Teacher lr :  0.1
+Student lr : 0.1
+
+[ Train epoch: 16 ]
+
+Current batch: 0
+
+Current batch: 20
+Current adversarial peer train accuracy: 14.84375
+Current adversarial peer train loss: nan
+Current adversarial copeer train accuracy: 14.84375
+Current adversarial copeer train loss: nan
+Current adversarial student train accuracy: 14.84375
+Current adversarial student train loss: nan
+
+Current batch: 40
+
+Current batch: 60
+
+Current batch: 80
+
+Current batch: 100
+
+Current batch: 120
+
+Current batch: 140
+
+Current batch: 160
+
+Current batch: 180
+
+Current batch: 200
+
+Current batch: 220
+
+Current batch: 240
+
+Current batch: 260
+
+Current batch: 280
+
+Current batch: 300
+
+Current batch: 320
+
+Current batch: 340
+
+Current batch: 360
+
+Current batch: 380
+
+Total adversarial peer train accuarcy: 10.0
+Total adversarial peer train loss: nan
+
+Total adversarial copeer train accuarcy: 10.0
+Total adversarial copeer train loss: nan
+Total adversarial student train loss: nan
+Total adversarial student train accuarcy: 10.0
+
+[ Test epoch: 16 ]
+
+Total test clean accuarcy of the student model : 10.0
+Total adversarial test Accuarcy of the student model against PGD-10 : 10.0
+Total test clean loss of the student model: nan
+Total adversarial test loss of the student model: nan
+Epoch :  17
+Teacher lr :  0.1
+Teacher lr :  0.1
+Student lr : 0.1
+
+[ Train epoch: 17 ]
+
+Current batch: 0
+
+Current batch: 20
+Current adversarial peer train accuracy: 10.15625
+Current adversarial peer train loss: nan
+Current adversarial copeer train accuracy: 10.15625
+Current adversarial copeer train loss: nan
+Current adversarial student train accuracy: 10.15625
+Current adversarial student train loss: nan
+
+Current batch: 40
+
+Current batch: 60
+
+Current batch: 80
+
+Current batch: 100
+
+Current batch: 120
+
+Current batch: 140
+
+Current batch: 160
+
+Current batch: 180
+
+Current batch: 200
+
+Current batch: 220
+
+Current batch: 240
+
+Current batch: 260
+
+Current batch: 280
+
+Current batch: 300
+
+Current batch: 320
+
+Current batch: 340
+
+Current batch: 360
+
+Current batch: 380
+
+Total adversarial peer train accuarcy: 10.0
+Total adversarial peer train loss: nan
+
+Total adversarial copeer train accuarcy: 10.0
+Total adversarial copeer train loss: nan
+Total adversarial student train loss: nan
+Total adversarial student train accuarcy: 10.0
+
+[ Test epoch: 17 ]
+
+Total test clean accuarcy of the student model : 10.0
+Total adversarial test Accuarcy of the student model against PGD-10 : 10.0
+Total test clean loss of the student model: nan
+Total adversarial test loss of the student model: nan
+Epoch :  18
+Teacher lr :  0.1
+Teacher lr :  0.1
+Student lr : 0.1
+
+[ Train epoch: 18 ]
+
+Current batch: 0
+
+Current batch: 20
+Current adversarial peer train accuracy: 10.15625
+Current adversarial peer train loss: nan
+Current adversarial copeer train accuracy: 10.15625
+Current adversarial copeer train loss: nan
+Current adversarial student train accuracy: 10.15625
+Current adversarial student train loss: nan
+
+Current batch: 40
+
+Current batch: 60
+
+Current batch: 80
+
+Current batch: 100
+
+Current batch: 120
+
+Current batch: 140
+
+Current batch: 160
+
+Current batch: 180
+
+Current batch: 200
+
+Current batch: 220
+
+Current batch: 240
+
+Current batch: 260
+
+Current batch: 280
+
+Current batch: 300
+
+Current batch: 320
+
+Current batch: 340
+
+Current batch: 360
+
+Current batch: 380
+
+Total adversarial peer train accuarcy: 10.0
+Total adversarial peer train loss: nan
+
+Total adversarial copeer train accuarcy: 10.0
+Total adversarial copeer train loss: nan
+Total adversarial student train loss: nan
+Total adversarial student train accuarcy: 10.0
+
+[ Test epoch: 18 ]
+
+Total test clean accuarcy of the student model : 10.0
+Total adversarial test Accuarcy of the student model against PGD-10 : 10.0
+Total test clean loss of the student model: nan
+Total adversarial test loss of the student model: nan
+Epoch :  19
+Teacher lr :  0.1
+Teacher lr :  0.1
+Student lr : 0.1
+
+[ Train epoch: 19 ]
+
+Current batch: 0
+
+Current batch: 20
+Current adversarial peer train accuracy: 11.71875
+Current adversarial peer train loss: nan
+Current adversarial copeer train accuracy: 11.71875
+Current adversarial copeer train loss: nan
+Current adversarial student train accuracy: 11.71875
+Current adversarial student train loss: nan
+
+Current batch: 40
+
+Current batch: 60
+
+Current batch: 80
+
+Current batch: 100
+
+Current batch: 120
+
+Current batch: 140
+
+Current batch: 160
+
+Current batch: 180
+
+Current batch: 200
+
+Current batch: 220
+
+Current batch: 240
+
+Current batch: 260
+
+Current batch: 280
+
+Current batch: 300
+
+Current batch: 320
+
+Current batch: 340
+
+Current batch: 360
+
+Current batch: 380
+
+Total adversarial peer train accuarcy: 10.0
+Total adversarial peer train loss: nan
+
+Total adversarial copeer train accuarcy: 10.0
+Total adversarial copeer train loss: nan
+Total adversarial student train loss: nan
+Total adversarial student train accuarcy: 10.0
+
+[ Test epoch: 19 ]
+
+Total test clean accuarcy of the student model : 10.0
+Total adversarial test Accuarcy of the student model against PGD-10 : 10.0
+Total test clean loss of the student model: nan
+Total adversarial test loss of the student model: nan
+Epoch :  20
+Teacher lr :  0.1
+Teacher lr :  0.1
+Student lr : 0.1
+
+[ Train epoch: 20 ]
+
+Current batch: 0
+
+Current batch: 20
+Current adversarial peer train accuracy: 11.71875
+Current adversarial peer train loss: nan
+Current adversarial copeer train accuracy: 11.71875
+Current adversarial copeer train loss: nan
+Current adversarial student train accuracy: 11.71875
+Current adversarial student train loss: nan
+
+Current batch: 40
+
+Current batch: 60
+
+Current batch: 80
+
+Current batch: 100
+
+Current batch: 120
+
+Current batch: 140
+
+Current batch: 160
+
+Current batch: 180
+
+Current batch: 200
+
+Current batch: 220
+
+Current batch: 240
+
+Current batch: 260
+
+Current batch: 280
+
+Current batch: 300
+
+Current batch: 320

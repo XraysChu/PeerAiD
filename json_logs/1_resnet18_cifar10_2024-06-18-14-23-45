@@ -1,0 +1,1 @@
+{"AA_student_clean_acc": 0.8402, "AA_student_robust_acc": 0.5071, "AA_swa_student_clean_acc": 0.8399, "AA_swa_student_robust_acc": 0.5212, "student_best_pgd_acc": 52.59, "swa_student_best_pgd_acc": 54.04, "student_best_fgsm_acc": 59.67, "swa_student_best_fgsm_acc": 60.28}

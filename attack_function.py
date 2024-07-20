@@ -3,6 +3,7 @@ import torch.nn as nn
 import torch.optim as optim
 import torch.nn.functional as F
 from torch.autograd import Variable
+from utils.misc import NestedTensor
 
 import sys
 
@@ -52,6 +53,51 @@ class LinfPGDAttack(object):
 
         return x
 
+
+class NewLinfPGDAttack(object):
+    def __init__(self, model, epsilon, alpha):
+        self.model = model
+        self.epsilon = epsilon
+        self.alpha = alpha
+
+    def perturb(self, x_natural, y, k_step):
+
+        self.model.eval()
+
+        x, mask = x_natural.decompose()
+
+        x = x.detach()
+        if k_step > 0 :
+            x = x + torch.zeros_like(x).uniform_(-self.epsilon, self.epsilon)
+        for i in range(k_step):
+            x.requires_grad_()
+            with torch.enable_grad():
+                logits = self.model(x_natural)
+                loss = F.cross_entropy(logits, y)
+            grad = torch.autograd.grad(loss, [x])[0]
+            x = x.detach() + self.alpha * torch.sign(grad.detach())
+            x = torch.min(torch.max(x, x_natural - self.epsilon), x_natural + self.epsilon)
+            x = torch.clamp(x, 0, 1).detach()
+
+        return x
+
+class randomAttack(object):
+    def __init__(self, model, epsilon, alpha):
+        self.model = model
+        self.epsilon = epsilon
+        self.alpha = alpha
+
+    def perturb(self, x_natural, y, k_step):
+
+        self.model.eval()
+
+        x, mask = x_natural.decompose()
+
+        x = x.detach()
+        if k_step > 0 :
+            x = x + torch.zeros_like(x).uniform_(-self.epsilon, self.epsilon)
+    
+        return NestedTensor(x, mask)
 
 
 
